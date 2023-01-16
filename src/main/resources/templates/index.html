@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.crg" xmlns="http://www.w3.or/1999/xhtml">
+    <head>
+        <title>Api clima</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Api del clima</h1>
+        <form th:action="@{/weather}" method="post">
+        <label for="location">Pais::</label>
+        <input type="text" id="country" name="country">
+        <label for="city">Ciudad:</label>
+        <input type="text" id="city" name="city">
+        <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
