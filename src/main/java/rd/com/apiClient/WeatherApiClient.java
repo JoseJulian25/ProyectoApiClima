@@ -1,8 +1,9 @@
-package rd.com.web.weather;
+ package rd.com.apiClient;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.web.client.RestTemplate;
+import rd.com.weather.WeatherData;
 
 public class WeatherApiClient {
 
@@ -12,7 +13,7 @@ public class WeatherApiClient {
         city = city.replace(" ", "+");
         country = country.replace(" ", "+");
         String url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country
-                + "&appid=6d519d050ce51208144c63529438d0a4";
+                + "&appid=6d519d050ce51208144c63529438d0a4&lang=es";
 
         RestTemplate restTemplate = new RestTemplate();
         String jsonResponse = restTemplate.getForObject(url, String.class);

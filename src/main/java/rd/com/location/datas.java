@@ -1,12 +1,12 @@
-package rd.com.web.weather;
+package rd.com.location;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.List;
 import lombok.Data;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-public class Weather {
-    private String main;
-    private String descripcion;
-    private String icon;
+public class datas {
+    private String country;
+    List<String> cities;
 }

@@ -8,11 +8,14 @@
     <body>
         <h1>Api del clima</h1>
         <form th:action="@{/weather}" method="post">
-        <label for="location">Pais::</label>
-        <input type="text" id="country" name="country">
-        <label for="city">Ciudad:</label>
-        <input type="text" id="city" name="city">
-        <input type="submit" value="Submit">
+            <label for="location">Pais::</label>
+            <Select type="" id="country" name="country" > 
+                <option th:each="data : ${locationData.data}" th:value="${data.country}" th:text="${data.country}"
+                        th:object="${data}"></option> 
+            </Select>
+            <label for="city">Ciudad:</label>
+            <input name="city" id="city" />
+            <input type="submit" value="Submit">
         </form>
     </body>
 </html>
